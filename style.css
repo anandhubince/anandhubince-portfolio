@@ -254,7 +254,8 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1000px) {
+/* Home Page - Tablet Responsive Design */
+@media (max-width: 800px) {
     .hero {
         flex-direction: column-reverse;
         text-align: center;
