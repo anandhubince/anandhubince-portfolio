@@ -272,7 +272,7 @@ footer {
     }
 }
 
-@/* Mobile Header and Navigation */
+/* Mobile Header and Navigation */
 @media (max-width: 650px) {
 
     .topbar {
