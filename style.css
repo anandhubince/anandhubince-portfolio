@@ -29,7 +29,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
     z-index: 1000;
 }
 
@@ -49,7 +48,8 @@ body {
 .topbar-text {
     color: #bdbdc7;
     font-size: 14px;
-    white-space: nowrap;
+    font-weight: normal;
+    margin: 0;
 }
 
 /* Sidebar */
@@ -272,7 +272,7 @@ footer {
     }
 }
 
-/* Mobile Header and Navigation */
+@/* Mobile Header and Navigation */
 @media (max-width: 650px) {
 
     .topbar {
@@ -431,7 +431,11 @@ footer {
     }
 }
 
-/* Skills Page */
+
+/* =========================
+   SKILLS PAGE
+========================= */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -453,9 +457,22 @@ footer {
 }
 
 .skill-icon {
-    font-size: 30px;
-    margin-bottom: 12px;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #b6ff5c;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+/* Technology Icon Styling */
+.skill-icon i {
+    vertical-align: middle;
+}
+
 
 .skill-card h3 {
     color: #ffffff;
@@ -473,10 +490,16 @@ footer {
     }
 }
 
-/* Projects Page */
+
+/* ========================================
+   PROJECTS PAGE
+======================================== */
+
 .projects-section {
     padding: 30px;
 }
+
+/* Main Heading */
 
 .projects-section h1 {
     font-size: 38px;
@@ -495,7 +518,11 @@ footer {
     font-size: 16px;
 }
 
-/* Project Cards */
+
+/* ========================================
+   PROJECT CARDS
+======================================== */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -526,7 +553,9 @@ footer {
     border-color: #b6ff5c;
 }
 
+
 /* Project Number */
+
 .project-number {
     display: inline-block;
     color: #b6ff5c;
@@ -536,7 +565,9 @@ footer {
     margin-bottom: 15px;
 }
 
+
 /* Project Title */
+
 .project-card h2 {
     color: #ffffff;
     font-size: 21px;
@@ -544,7 +575,9 @@ footer {
     margin: 10px 0 15px;
 }
 
+
 /* Project Description */
+
 .project-description {
     color: #b0b0b8;
     font-size: 14px;
@@ -552,7 +585,11 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Project Image Gallery */
+
+/* ========================================
+   PROJECT IMAGE GALLERY
+======================================== */
+
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -577,13 +614,18 @@ footer {
     border-color: #b6ff5c;
 }
 
-/* Third picture spans full row */
+/* Make the third picture span the full row */
+
 .project-gallery img:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     height: 190px;
 }
 
-/* Technology Tags */
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
 .project-card h3 {
     color: #ffffff;
     font-size: 16px;
@@ -611,7 +653,11 @@ footer {
     background: #39452e;
 }
 
-/* Projects Contact Section */
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
 .project-contact {
     text-align: center;
     margin-top: 45px;
@@ -632,6 +678,9 @@ footer {
     margin-bottom: 22px;
 }
 
+
+/* Contact Button */
+
 .project-contact .btn {
     display: inline-block;
     text-decoration: none;
@@ -651,8 +700,13 @@ footer {
     background: #a4ee49;
 }
 
-/* Tablet Projects Layout */
+
+/* ========================================
+   TABLET RESPONSIVE DESIGN
+======================================== */
+
 @media (max-width: 1000px) {
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -670,8 +724,13 @@ footer {
     }
 }
 
-/* Mobile Projects Layout */
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
+
 @media (max-width: 600px) {
+
     .projects-section {
         padding: 20px 12px;
     }
@@ -709,7 +768,12 @@ footer {
     }
 }
 
-/* Contact Page */
+
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
 .contact-section {
     padding: 30px;
 }
@@ -730,7 +794,8 @@ footer {
     margin-bottom: 35px;
 }
 
-/* Contact Layout */
+/* Main Layout */
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -738,7 +803,8 @@ footer {
     align-items: start;
 }
 
-/* Contact Information and Form */
+/* Contact Information */
+
 .contact-info,
 .contact-form-container {
     background: #19191f;
@@ -761,6 +827,7 @@ footer {
 }
 
 /* Contact Details */
+
 .contact-item {
     display: flex;
     align-items: center;
@@ -803,6 +870,7 @@ footer {
 }
 
 /* Contact Form */
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -845,6 +913,7 @@ footer {
 }
 
 /* Submit Button */
+
 .contact-form-container .primary-btn {
     display: inline-block;
     padding: 13px 22px;
@@ -855,7 +924,8 @@ footer {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease,
+                background 0.3s ease;
 }
 
 .contact-form-container .primary-btn:hover {
@@ -870,7 +940,8 @@ footer {
     margin-top: 16px;
 }
 
-/* Contact Footer */
+/* Footer */
+
 .contact-footer {
     text-align: center;
     padding: 25px 10px;
@@ -878,7 +949,8 @@ footer {
     font-size: 13px;
 }
 
-/* Responsive Contact Layout */
+/* Responsive Design */
+
 @media (max-width: 900px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -908,4 +980,9 @@ footer {
         width: 100%;
     }
 }
+
+
+
+
+
 
